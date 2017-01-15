@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-sm-12">
+        <sebm-google-map [latitude]="lat" [longitude]="lng" (mapClick)="mapClicked($event)">
+            <sebm-google-map-marker [latitude]="markers.lat" [longitude]="markers.lng"></sebm-google-map-marker>
+        </sebm-google-map>
+    </div>
+</div>
+<p-dataList *ngIf="isArray" [value]="images" [paginator]="true" [rows]="5">
+    <template let-img>
+        <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px;border-bottom:1px solid #D5D5D5;">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-3" style="text-align:center"><img src="{{img}}"></div>
+                
+            </div>
+        </div>
+    </template>
+</p-dataList>
+<div class="text-center" *ngIf="!isArray">
+    <h1>You've got no results</h1>
+</div>

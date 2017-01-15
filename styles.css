@@ -1,0 +1,17 @@
+body{
+  overflow-x:hidden;
+}
+.sebm-google-map-container {
+  height: 300px;
+  width: 100%;
+}
+
+.images{
+  max-height:100px;
+  height: 100px;
+  max-width: 100px; 
+  width:100px;
+}
+.image-container{
+  width: calc(100% / 11);
+}
